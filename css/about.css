@@ -1,0 +1,229 @@
+.top_image{
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  border-bottom: 20px solid white;
+}
+
+div.aboutheader h1{
+  position: relative;
+  text-align: center;
+  color: transparent;
+  top: 130px;
+  letter-spacing: 5px;
+  font-size: 5em;
+  -webkit-text-stroke: 1px white;
+  background: url(../images/back.png);
+  -webkit-background-clip: text;
+  background-position: 0 0;
+  animation: strobe 18s linear infinite;
+}
+
+@keyframes strobe{
+  100%{
+    background-position: 2000px 0;
+  }
+}
+
+table{
+  margin-top: 300px;
+  margin-bottom: 50px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table tr td img{
+  margin-left: 100px;
+}
+
+table tr td h2, table tr td p{
+  margin-left: 100px;
+}
+
+tr td #whorwehead{
+  margin-top: 50px;
+  color: white;
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 2.5em;
+}
+
+tr td #whorwe{
+  max-width: 80%;
+  color: white;
+  font-size: 18px;
+}
+
+tr td #whorwe span{
+  text-decoration: underline;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+tr td #whorweimg{
+  margin-top: 50px;
+  position: relative;
+  vertical-align: middle;
+  max-width: 500px;
+  border: 2px solid grey;
+  box-shadow: 10px 10px;
+  border-radius: 5px;
+}
+
+tr td #missionhead{
+  margin-top: 50px;
+  color: white;
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 2.5em;
+}
+
+tr td #mission{
+  max-width: 80%;
+  color: white;
+  font-size: 18px;
+}
+
+tr td #mission span{
+  text-decoration: underline;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+tr td #missionimg{
+  margin-top: 50px;
+  position: relative;
+  vertical-align: middle;
+  float: left;
+  max-width: 500px;
+  border: 2px solid grey;
+  box-shadow: 10px 10px;
+  border-radius: 5px;
+}
+
+tr td #aboutstoryhead{
+  margin-top: 50px;
+  color: white;
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 2.5em;
+}
+
+tr td #story{
+  max-width: 80%;
+  color: white;
+  font-size: 18px;
+}
+
+tr td #story span{
+  text-decoration: underline;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+tr td #storyimg{
+  margin-top: 50px;
+  position: relative;
+  vertical-align: middle;
+  border: 2px solid grey;
+  box-shadow: 10px 10px;
+  border-radius: 5px;
+  max-width: 500px;
+}
+
+@media(max-width: 1400px){
+
+}
+
+@media(max-width: 1280px){
+
+}
+
+@media(max-width: 1200px){
+  table tr td img{
+    margin-left: 50px;
+  }
+
+  table tr td h2, table tr td p{
+    margin-left: 50px;
+  }
+}
+
+@media (max-width: 1120px){
+  div.aboutheader h1{
+    font-size: 3em;
+  }
+  table tr td img{
+    max-width: 400px;
+  }
+
+  table tr td h2{
+    font-size: 1.5em;
+  }
+
+  table tr td p{
+    font-size: 15px;
+  }
+
+  table{
+    margin-top: 200px;
+  }
+}
+
+@media (max-width: 991px){
+  table tr td img{
+    max-width: 400px;
+  }
+
+  div.aboutheader h1{
+    top: 80px;
+  }
+
+  table tr td{
+    display: inline-block;
+  }
+}
+
+@media (max-width: 768px){
+  table tr td img{
+    margin-left: 25px;
+  }
+
+  table tr td h2, table tr td p{
+    margin-left: 25px;
+  }
+
+  table tr td h2{
+    font-size: 1em;
+  }
+
+  table tr td p{
+    font-size: 12px;
+  }
+
+  table{
+    margin-top: 100px;
+  }
+
+  div.aboutheader h1{
+    font-size: 2em;
+    top: 60px;
+  }
+
+  .top_image{
+    border-bottom: 10px solid white;
+  }
+}
+
+@media(max-width: 576px){
+
+}
+
+@media(max-width: 480px){
+
+}
+
+@media(max-width: 376px){
+
+}

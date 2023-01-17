@@ -1,0 +1,184 @@
+.backgroundimageheader{
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  border-bottom: 10px solid white;
+}
+
+div.adjustcountdown{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 100px;
+  color: white;
+}
+
+h1{
+  font-weight: normal;
+  font-size: 55px;
+  margin-top: 100px;
+  margin-bottom: 40px;
+}
+
+div.countdown{
+  display: flex;
+  transform: scale(2);
+}
+
+div.timer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 15px;
+  margin-top: 50px;
+}
+
+.timer h2{
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1;
+}
+
+/* Responsive to smaller screens for the countdown timer*/
+@media(max-width: 500px){
+  h1{
+    font-size: 25px;
+  }
+  div.timer{
+    margin: 5px;
+  }
+  div.timer h2{
+    font-size: 12px;
+  }
+  div.timer small{
+    font-size: 10px;
+  }
+}
+
+div.welcome h1{
+    text-align: center;
+    color: transparent;
+    top: 130px;
+    margin-top: 150px;
+    letter-spacing: 5px;
+    font-weight: bold;
+    font-size: 4em;
+    -webkit-text-stroke: 1px white;
+    background: url(../images/back.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: strobe 18s linear infinite;
+}
+
+@keyframes strobe{
+    100%{
+      background-position: 2000px 0;
+    }
+  }
+
+div.welcome{
+  text-align: center;
+  color: white;
+}
+
+table{
+  margin-top: 50px;
+  margin-bottom: 80px;
+  width: 100%;
+}
+
+table tr td{
+  justify-content: center;
+  text-align: center;
+  border-radius: 10px;
+}
+
+table tr td a div.news1, table tr td a div.news2, table tr td a div.news3, table tr td a div.news4{
+  margin-bottom: 120px;
+  background: white;
+  margin: 0 30px;
+  border-radius: 10px;
+  transition: 0.7s;
+}
+
+table tr td a div.news1 img, table tr td a div.news2 img, table tr td a div.news3 img, table tr td a div.news4 img{
+  margin-top: 10px;
+  border: 2px solid black;
+}
+
+table tr td a div.news1:hover, table tr td a div.news2:hover, table tr td a div.news3:hover, table tr td a div.news4:hover{
+  transform: scale(1.1);
+  background: rgb(50,50,50);
+}
+
+table tr td a{
+  color: black;
+  text-decoration: none;
+}
+
+table tr td a:hover{
+  color: white;
+}
+
+@media (max-width: 1400px){
+  table tr td a div.news1, table tr td a div.news2, table tr td a div.news3, table tr td a div.news4{
+    margin: 0 10px;
+  }
+  h1{
+    font-size: 40px;
+  }
+  div.countdown{
+    transform: scale(1.5);
+  }
+  div.welcome h1{
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 1280px){
+  td{
+    display: block;
+  }
+  h1{
+    margin-top: 50px;
+  }
+
+  div.timer{
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 1200px){
+  div.timer{
+    margin-top: 18px;
+  }
+}
+
+@media (max-width: 1120px){
+  .backgroundimageheader{
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 991px){
+
+}
+
+@media (max-width: 768px){
+
+}
+
+@media (max-width: 576px){
+
+}
+
+@media (max-width: 480px){
+
+}
+
+@media (max-width: 376px){
+
+}

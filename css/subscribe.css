@@ -1,0 +1,248 @@
+.top_image{
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  border-bottom: 20px solid white;
+}
+
+div.aboutheader h1{
+  position: relative;
+  text-align: center;
+  color: transparent;
+  top: 130px;
+  letter-spacing: 5px;
+  font-size: 5em;
+  -webkit-text-stroke: 1px white;
+  background: url(../images/back.png);
+  -webkit-background-clip: text;
+  background-position: 0 0;
+  animation: strobe 18s linear infinite;
+}
+
+@keyframes strobe{
+  100%{
+    background-position: 2000px 0;
+  }
+}
+
+div#subscribeadjust{
+  position: relative;
+  display: block;
+  margin-top: 300px;
+}
+
+div.subscribeformtemplate{
+  display: flex;
+  background-size: cover;
+  justify-content: center;
+}
+
+div.subscribeformtemplate div.subscribeapplication h1{
+  padding: 20px 0px;
+  font-size: 30px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+}
+
+div.subscribeapplication{
+  position: relative;
+  width: 600px;
+  height: auto;
+  background: rgba(255, 255, 255, 1.0);
+  border-radius: 5px;
+  margin-bottom: 50px;
+}
+
+.subscribeform input{
+  height: 40px;
+  width: 525px;
+  padding: 0 5px;
+  font-size: 18px;
+  outline: none;
+  border: 1px solid silver;
+  margin-left: 35px;
+}
+
+.subscribeform select{
+  width: 200px;
+  margin-left: 35px;
+  font-size: 15px;
+}
+
+.subscribeform div.label{
+  font-size: 18px;
+  color: black;
+  margin-top: 50px;
+  margin-bottom: 5px;
+  margin-left: 35px;
+}
+
+.subscribeform button{
+  margin-top: 10px;
+  margin-left: 35px;
+  padding: 10px 10px;
+  width: 530px;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 1px;
+  background: purple;
+  color: white;
+  outline: none;
+  border: 1px solid purple;
+  margin-bottom: 15px;
+}
+
+.subscribeform button:hover{
+  background: white;
+  color: black;
+  border: 1px solid black;
+}
+
+div#blankfield1,
+div#blankfield2{
+  margin-top: 5px;
+  width: 250px;
+  font-size: 18px;
+  color: #C62828;
+  background: rgba(255, 0, 0, 0.1);
+  text-align: center;
+  padding: 5px 8px;
+  border-radius: 3px;
+  border: 1px solid #EF9A9A;
+  display: none;
+}
+
+div#blankfield1{
+  margin-left: 35px;
+}
+
+div#blankfield2{
+  margin-right: 40px;
+}
+
+div#validmail,
+div#validnum,
+div#validcard{
+  margin-top: 5px;
+  width: 525px;
+  font-size: 18px;
+  color: #C62828;
+  background: rgba(255, 0, 0, 0.1);
+  text-align: center;
+  padding: 5px 8px;
+  border-radius: 3px;
+  border: 1px solid #EF9A9A;
+  margin-left: 35px;
+  display: none;
+}
+
+div#responseadjust{
+  position: relative;
+  display: none;
+}
+
+div.responsebackground{
+  display: flex;
+  background-size: cover;
+  justify-content: center;
+  margin-top: 300px;
+}
+
+div.responsebackground div.repsponsecontent h1{
+  padding: 20px 0px;
+  font-size: 30px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+}
+
+div.repsponsecontent{
+  position: relative;
+  width: 600px;
+  height: auto;
+  background: rgba(255, 255, 255, 1.0);
+  border-radius: 5px;
+  margin-bottom: 50px;
+  font-size: 20px;
+}
+
+div.repsponsecontent p{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.repsponsecontent p.lastline{
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1400px){
+  div#subscribeadjust{
+    margin-top: 200px;
+  }
+}
+
+@media (max-width: 1280px){
+
+}
+
+@media (max-width: 1200px){
+
+}
+
+@media (max-width: 1120px){
+  div.aboutheader h1{
+    top: 100px;
+  }
+
+  div#subscribeadjust{
+    margin-top: 150px;
+  }
+}
+
+@media (max-width: 991px){
+  div.aboutheader h1{
+    top: 100px;
+    font-size: 3em;
+  }
+
+  div#subscribeadjust{
+    margin-top: 180px;
+  }
+
+}
+
+@media (max-width: 768px){
+  div.aboutheader h1{
+    top: 80px;
+    font-size: 2em;
+  }
+
+  div#subscribeadjust{
+    margin-top: 150px;
+  }
+}
+
+@media (max-width: 576px){
+  .top_image{
+    border-bottom: 10px solid white;
+  }
+
+  div.aboutheader h1{
+    top: 60px;
+    font-size: 2em;
+  }
+
+  div#subscribeadjust{
+    margin-top: 120px;
+  }
+
+  div.subscribeapplication{
+    width: 560px;
+  }
+}
+
+@media (max-width: 480px){
+
+}

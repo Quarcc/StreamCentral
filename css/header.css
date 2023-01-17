@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap'); /* importing a google font im using in this web page */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*  if element width is n pixels, border or padding added will shrink to that size */
+  font-family: 'Poppins', sans-serif; /* font for the entire website */
+}
+
+body{
+  min-height: 100vh; /* 100% of the available heigh */
+  background: linear-gradient(black, purple);
+}
+
+header.sticky a #logoimg{
+  vertical-align: middle;
+  width: 130px;
+  height: 60px;
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
+
+header a #logoimg{
+  vertical-align: middle;
+  width: 130px;
+  height: 60px;
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
+
+header{
+  position: fixed; /*element stays in the same pace during scorlling, creating sticky effect*/
+  top: 0;
+  left: 0;
+  width: 100%; /* the length of the navigation bar will fill up the entire width of the page */
+  padding: 30px 100px; /* padding top and bottom 30px, left and right 100px */
+  display: flex; /* aligns the lists in a row */
+  justify-content: space-between; /* distribute the items evenly */
+  align-items: center; /* everything centered on the axis */
+  transition: 0.7s; /* control speed of animation */
+  z-index: 100000; /* allows this element to cover other elements with smaller z-index */
+}
+
+header.sticky{
+  padding: 2px 100px;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+header .logo{
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  transition: 0.6s;
+}
+
+header ul{
+  display: flex; /* aligns the lists in a row */
+  justify-content: center; /* pack items in the center */
+  align-items: center;
+}
+
+header ul li{
+  list-style: none; /* removes the dot */
+  margin-left: 20px;
+}
+
+header ul li a{
+  text-decoration: none;
+  padding: 6px 15px;
+  color: white;
+  border-radius: 15px;
+  transition: 0.6s;
+}
+
+header ul ul{
+  position: absolute;
+  top: 60px;
+}
+
+header ul li a:hover, header ul li a.current{
+  background-color: white;
+  color: black;
+}
+
+header ul li a.login{
+  background-color: black;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+header ul li a.login img{
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
+
+header ul li a.sub{
+  background-color: purple;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding-top: 8px;
+  padding-bottom: 6px;
+  border-radius: 10px;
+}
+
+header ul li a.logout{
+  background-color: purple;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding-bottom: 8.5px;
+  border-radius: 10px;
+}
+
+header ul li img.logouticon{
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
+
+header ul li img{
+  vertical-align: middle; /* align image and the text in the center */
+  width: 35px;
+  height: 35px;
+  margin-top: 0.5px;
+  margin-bottom: 2px;
+}
+
+.banner{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url(bg.jpg);
+  background-size: cover;
+}
+
+header.sticky .logo,
+header.sticky ul li a{
+  color: white;
+}
+
+header.sticky ul li a:hover, header.sticky ul li a.current{
+  background-color: white;
+  color: black;
+}
+
+header.sticky ul li a.login{
+  background-color: black;
+  color: white;
+}
+
+header.sticky ul li a.sub{
+  background-color: purple;
+  color: white;
+  padding-top: 7px;
+  padding-bottom: 5px;
+}
+
+#logcurrent{
+  border: 2px solid black;
+  background: white;
+  color: black;
+}
+
+#logcurrent img{
+  -webkit-filter: invert(0);
+  filter: invert(0);
+}
+
+#subcurrent{
+  border: 2px solid black;
+  background: white;
+  color: black;
+}
+
+@media(max-width: 1280px){
+  header{
+    width: 1280px;
+  }
+
+  header a #logoimg{
+    max-width: 100px;
+    max-height: 51px;
+  }
+  header ul li a{
+    font-size: 0.9em;
+  }
+}
+
+@media(max-width: 1200px){
+  header{
+    width: 1200px;
+  }
+
+  header a.logo{
+    font-size: 1.5em;
+  }
+
+  header ul li a{
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 1120px){
+  header{
+    width: 1120px;
+  }
+
+  header a #logoimg{
+    max-width: 90px;
+    max-height: 45px;
+  }
+
+  header a.logo{
+    font-size: 1em;
+    letter-spacing: 1px;
+  }
+
+  header ul li a{
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 991px){
+  header{
+    width: 991px;
+  }
+
+  header a #logoimg{
+    max-width: 130px;
+    max-height: 66px;
+  }
+
+  header a.logo{
+    font-size: 1.5em;
+    letter-spacing: 2px;
+  }
+
+  .navigation{
+    display: none;
+  }
+
+  .navigation.active{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .navigation li a{
+    font-size: 2em;
+    margin: 10px 0;
+    display: inline-block;
+  }
+
+  .toggle{
+    position: relative;
+    width: 32px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100000;
+    cursor: pointer;
+  }
+
+  .toggle.active{
+    position: fixed;
+    right: 40px;
+  }
+
+  .toggle::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: white;
+    transform: translateY(-10px);
+    box-shadow: 0 10px 0 white;
+    transition: 0.25s;
+  }
+
+  .toggle.active::before{
+    transform: translateY(0px) rotate(45deg);
+    box-shadow: 0 0 0 white;
+  }
+
+  .toggle::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: white;
+    transform: translateY(10px);
+    transition: 0.25s
+  }
+
+  .toggle.active::after{
+    transform: translateY(0px) rotate(-45deg);
+    box-shadow: 0 0 0 white;
+  }
+}
+
+@media(max-width: 768px){
+  header{
+    width: 768px;
+  }
+}
+
+@media(max-width: 576px){
+  header{
+    width: 576px;
+  }
+
+  header a #logoimg{
+    max-width: 60px;
+    max-height: 31px;
+  }
+
+  header a.logo{
+    font-size: 1em;
+    letter-spacing: none;
+    margin-left: -80px;
+  }
+}
+
+@media(max-width: 480px){
+  header{
+    width: 480px;
+  }
+}
+
+@media(max-width: 376px){
+
+}

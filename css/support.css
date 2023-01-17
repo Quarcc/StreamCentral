@@ -1,0 +1,328 @@
+.top_image{
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  border-bottom: 20px solid white;
+}
+
+div.supportheader h1{
+  position: relative;
+  text-align: center;
+  color: transparent;
+  top: 130px;
+  letter-spacing: 5px;
+  font-size: 5em;
+  -webkit-text-stroke: 1px white;
+  background: url(../images/back.png);
+  -webkit-background-clip: text;
+  background-position: 0 0;
+  animation: strobe 18s linear infinite;
+}
+
+div.supportheader h2{
+  position: relative;
+  text-align: center;
+  color: transparent;
+  font-size: 3em;
+  letter-spacing: 3px;
+  -webkit-text-stroke: 1px white;
+  background: url(../images/back.png);
+  -webkit-background-clip: text;
+  background-position: 0 0;
+  animation: strobe 18s linear infinite;
+}
+
+@keyframes strobe{
+  100%{
+    background-position: 2000px 0;
+  }
+}
+
+div#supportadjust{
+  position: relative;
+  display: block;
+  margin-top: 300px;
+}
+
+div.supportformtemplate{
+  display: flex;
+  background-size: cover;
+  justify-content: center;
+}
+
+div.supportformtemplate div.supportform h1{
+  padding: 20px 0px;
+  font-size: 30px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+}
+
+div.supportform{
+  position: relative;
+  width: 600px;
+  height: auto;
+  background: rgba(255, 255, 255, 1.0);
+  border-radius: 5px;
+  margin-bottom: 50px;
+}
+
+.support_form input{
+  height: 40px;
+  width: 525px;
+  padding: 0 5px;
+  font-size: 18px;
+  outline: none;
+  border: 1px solid silver;
+  margin-left: 35px;
+}
+
+.support_form textarea{
+  border: 1px solid silver;
+  margin-left: 35px;
+}
+
+.support_form div.label{
+  font-size: 18px;
+  color: black;
+  margin-top: 50px;
+  margin-bottom: 5px;
+  margin-left: 35px;
+}
+
+.support_form button{
+  margin-top: 10px;
+  margin-left: 35px;
+  padding: 10px 10px;
+  width: 530px;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 1px;
+  background: purple;
+  color: white;
+  outline: none;
+  border: 1px solid purple;
+  margin-bottom: 15px;
+}
+
+.support_form button:hover{
+  background: white;
+  color: black;
+  border: 1px solid black;
+}
+
+div.tableadjust{
+  position: relative;
+  text-align: center;
+  max-width: 50%;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table.OH{
+  background: white;
+  border-collapse: collapse;
+  border: 2px solid black;
+  margin-bottom: 50px;
+}
+
+table.OH tr th{
+  background: purple;
+  color: white;
+  border-bottom: 3px solid black;
+}
+
+table.OH tr td{
+  font-weight: 600;
+}
+
+table.OH tr td.hours{
+  color: purple;
+}
+
+table.OH tr th{
+  font-size: 1.2em;
+  padding: 5px 15px;
+}
+
+table.OH tr td{
+  padding: 5px 5px;
+}
+
+div#blankfield1,
+div#blankfield2{
+  margin-top: 5px;
+  width: 250px;
+  font-size: 18px;
+  color: #C62828;
+  background: rgba(255, 0, 0, 0.1);
+  text-align: center;
+  padding: 5px 8px;
+  border-radius: 3px;
+  border: 1px solid #EF9A9A;
+  display: none;
+}
+
+div#blankfield1{
+  margin-left: 35px;
+}
+
+div#blankfield2{
+  margin-right: 40px;
+}
+
+div#blankfield4,
+div#blankfield5,
+div#validmail{
+  margin-top: 5px;
+  width: 525px;
+  font-size: 18px;
+  color: #C62828;
+  background: rgba(255, 0, 0, 0.1);
+  text-align: center;
+  padding: 5px 8px;
+  border-radius: 3px;
+  border: 1px solid #EF9A9A;
+  margin-left: 35px;
+  display: none;
+}
+
+div#responseadjust{
+  position: relative;
+  display: none;
+}
+
+div.responsebackground{
+  display: flex;
+  background-size: cover;
+  justify-content: center;
+  margin-top: 300px;
+}
+
+div.responsebackground div.repsponsecontent h1{
+  padding: 20px 0px;
+  font-size: 30px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+}
+
+div.repsponsecontent{
+  position: relative;
+  width: 600px;
+  height: auto;
+  background: rgba(255, 255, 255, 1.0);
+  border-radius: 5px;
+  margin-bottom: 50px;
+  font-size: 20px;
+}
+
+div.repsponsecontent p{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.repsponsecontent p.lastline{
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1400px){
+  table.OH{
+    margin-left: -110px;
+  }
+
+  div#supportadjust{
+    margin-top: 200px;
+  }
+}
+
+@media (max-width: 1280px){
+  table.OH{
+    margin-left: -140px;
+  }
+}
+
+@media (max-width: 1200px){
+  table.OH{
+    margin-left: -170px;
+  }
+}
+
+@media (max-width: 1120px){
+  table.OH{
+    margin-left: -190px;
+  }
+  div.supportheader h1{
+    top: 80px;
+  }
+}
+
+@media (max-width: 991px){
+  table.OH{
+    margin-left: -220px;
+  }
+}
+
+@media (max-width: 768px){
+  div.supportheader h1{
+    font-size: 2em;
+    top: 70px;
+  }
+
+  div.supportform{
+    width: 580px;
+  }
+
+  .top_image{
+    border-bottom: 10px solid white;
+  }
+
+  table.OH{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  table.OH thead{
+    display: none;
+  }
+
+  table.OH, table.OH tbody, table.OH tr, table.OH td{
+    display: block;
+    width: 100%;
+  }
+
+  table.OH tr{
+    margin-bottom: 15px;
+  }
+
+  table.OH td{
+    text-align: right;
+    padding-left: 50%;
+    text-align: right;
+    position: relative;
+  }
+
+  table.OH td::before{
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 15px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+  }
+}
+
+@media (max-width: 576px){
+  div.supportheader h1{
+    font-size: 1.5em;
+    top: 60px;
+  }
+}
+
+@media (max-width: 480px){
+
+}

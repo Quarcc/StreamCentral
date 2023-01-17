@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="images/f1.png">
+  <title>Stream Central</title>
+  <link rel="stylesheet" type="text/css" href="css/header.css">
+  <link rel="stylesheet" type="text/css" href="css/about.css">
+  <link rel="stylesheet" type="text/css" href="css/footer.css">
+</head>
+
+<body>
+  <section class="main">
+    <header>
+      <a href="home.html" class="logo"><img src="images/f1car.png" id="logoimg">STREAM CENTRAL</a>
+      <div class="toggle"></div>
+      <ul class="navigation">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="#" class="current">About</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="loginpage.html" class="login"><img src="images/usericon.png" alt="usericon">Login</a></li>
+        <li><a href="subscribe.html" class="sub">Subscribe</a></li>
+      </ul>
+      <!--- The script here creates the navigation for smaller screens--->
+      <script type="text/javascript">
+        var menutoggle = document.querySelector('.toggle');
+        var navigation = document.querySelector('.navigation');
+        menutoggle.onclick = function(){
+          menutoggle.classList.toggle('active')
+          navigation.classList.toggle('active')
+        }
+      </script>
+      <!--- The script here creates the sticky effect--->
+      <script type="text/javascript">
+        window.addEventListener("scroll", function() {
+          var header = document.querySelector("header");
+          header.classList.toggle("sticky", window.scrollY > 0);
+        })
+      </script>
+      <!--- The script here creates the sticky effect--->
+    </header>
+    <img class="top_image" src="images/abouttop_image.png" alt="">
+  </section>
+  <div class="aboutheader">
+    <h1>ABOUT US</h1>
+  </div>
+  <div class="abouttableadjust">
+    <table>
+      <tr>
+        <td>
+          <img src="images/aboutwho_image.png" id="whorweimg" alt="">
+        </td>
+        <td>
+          <h2 id="whorwehead">WHO ARE WE?</h2>
+          <p id="whorwe">We provide streaming services to the <span>top</span> motorsports channels with the <span>highest</span> quality of streams.<br><br>We strive to make our pricing affordable and fair for all users. During your subscription with
+            us, we can guarantee a buffer-free stream. Moreover, we provide stream access to several different languages to suit your comfort needs!<br><br>STREAM CENTRAL is in collaboration with all of your favourite motorsports and the
+            <span>most</span> popular live streaming channels.<br><br>So what are you waiting for? Join the STREAM CENTRAL family today!</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img src="images/aboutmission_image.png" id="missionimg" alt="">
+        </td>
+        <td>
+          <h2 id="missionhead">OUR MISSION:</h2>
+          <p id="mission">Do you have bilingual family members and some would prefer to watch motorsport streams on a <span>different</span> language?<br><br>Do you have family members that prefer to watch other motorsport streams but the live stream
+            <span>clashes</span>?<br><br>Well our mission is to solve all of those problems of yours. Our website provides the option for <span>you</span> to watch multiple different motorsport streams at one time or to watch multiple motorsport streams
+            in different laguages at the same time!<br><br>This is <span>all possible</span> with our <span>multi-stream</span> feature!</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img src="images/aboutstory_image.jpg" id="storyimg" alt="">
+        </td>
+        <td>
+          <h2 id="aboutstoryhead">OUR STORY:</h2>
+          <p id="story">Our website was created for only <span>one</span> reason. And that was to make sure that <span>all</span> of our motorsport fans will have ease and comfort when watching their favourite motorsport live streams.<br><br>Our team
+            compromises of "hardcore" motorsport fans that came together to make sure that <span>everyone and anyone</span> can enjoy the sport like we do.<br><br>Therefore the team was form to only have <span>one common goal</span> and that was to make
+            motorsport a live stream for all to <span>love</span></p>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <!-- <div class="aboutwhoadjust">
+    <div class="aboutwho">
+      <h2 id="whorwehead">WHO ARE WE?</h2>
+      <p id="whorwe">We provide streaming services to the <span>top</span> motorsports channels with the <span>highest</span> quality of streams.<br><br>We strive to make our pricing affordable and fair for all users. During your subscription with
+        us, we can guarantee a buffer-free stream. Moreover, we provide stream access to several different languages to suit your comfort needs!<br><br>STREAM CENTRAL is in collaboration with all of your favourite motorsports and the
+        <span>most</span> popular live streaming channels.<br><br>So what are you waiting for? Join the STREAM CENTRAL family today!</p>
+    </div>
+  </div>
+  <img src="images/aboutwho_image.jpg" id="whorweimg" alt="">
+  <img src="images/aboutmission_image.jpg" id="missionimg" alt="">
+  <div class="aboutmissionadust">
+    <div class="aboutmission">
+      <h2 id="missionhead">OUR MISSION:</h2>
+      <p id="mission">Do you have bilingual family members and some would prefer to watch motorsport streams on a <span>different</span> language?<br><br>Do you have family members that prefer to watch other motorsport streams but the live stream
+        <span>clashes</span>?<br><br>Well our mission is to solve all of those problems of yours. Our website provides the option for <span>you</span> to watch multiple differnt motorsport streams at one time or to watch multiple motorsport streams
+        in different laguages at the same time!<br><br>This is <span>all possible</span> with our <span>multi-stream</span> feature!</p>
+    </div>
+  </div>
+  <div class="aboutstoryadjust">
+    <div class="aboutstory">
+      <h2 id="aboutstoryhead">OUR STORY:</h2>
+      <p id="story">Our website was created for only <span>one</span> reason. And that was to make sure that <span>all</span> of our motorsport fans will have ease and comfort when watching their favourite motorsport live streams.<br><br>Our team
+        compromises of "hardcore" motorsport fans that came together to make sure that <span>everyone and anyone</span> can enjoy the sport like we do.<br><br>Therefore the team was form to only have <span>one common goal</span> and that was to make
+        motorsport a live stream for all to <span>love</span></p>
+    </div>
+  </div>
+  <img src="images/aboutstory_image.jpg" id="storyimg" alt=""> -->
+  <footer>
+    <div class="box">
+      <div class="section aboutus">
+        <h2>About Us</h2>
+        <p>We provide streaming services to the top motorsports channels at an affordable price. By subscribing to our services, you gain access to all the different channels, allowing you indulge in high quality streams across the popular motorsport
+          channels.</p>
+        <ul class="socials2">
+          <li><a href="https://www.facebook.com/nanyangpoly/" target="_blank">
+              <ion-icon name="logo-facebook" class="facebook"></ion-icon>
+            </a></li>
+          <li><a href="https://twitter.com/nyptweets" target="_blank">
+              <ion-icon name="logo-twitter" class="twitter"></ion-icon>
+            </a></li>
+          <li><a href="https://www.instagram.com/nanyangpoly/?hl=en" target="_blank">
+              <ion-icon name="logo-instagram" class="insta"></ion-icon>
+            </a></li>
+          <li><a href="https://www.youtube.com/channel/UCMP8RjXKT-onEF5Fgqt1cpw" target="_blank">
+              <ion-icon name="logo-youtube" class="youtube"></ion-icon>
+            </a></li>
+        </ul>
+      </div>
+      <div class="section quicklinks">
+        <h2>Quick Links</h2>
+        <ul>
+          <li><a href="subscribe.html">Subscribe</a></li>
+          <li><a href="loginpage.html">Login</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+      </div>
+      <div class="section contact">
+        <h2>Contact Info</h2>
+        <ul class="info">
+          <li>
+            <span>
+              <ion-icon name="pin"></ion-icon>
+            </span>
+            <span>Nanyang Polytechnic<br> 180 Ang Mo Kio Avenue 8<br> Singapore 569830</span>
+          </li>
+          <li>
+            <span>
+              <ion-icon name="call"></ion-icon>
+            </span>
+            <p><a href="tel:64515115">+65 6451 5115</a></p>
+          </li>
+          <li>
+            <span>
+              <ion-icon name="mail"></ion-icon>
+            </span>
+            <p><a href="mailto:contactNYP@nyp.edu.sg">contactNYP@nyp.edu.sg</a></p>
+          </li>
+        </ul>
+      </div>
+      <div class="section map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3988.6632867796243!2d103.84716055085076!3d1.3786970618599221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2ssg!4v1658928778155!5m2!1sen!2ssg" width="450" height="300"
+          style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </footer>
+  <div class="copyright">
+    <p>Copyright &copy; 2022 Stream Central. All Rights Reserved.</p>
+  </div>
+  <!--- This script here helps import images from ionicons --->
+  <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+</body>

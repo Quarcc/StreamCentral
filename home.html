@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="images/f1.png">
+  <title>Stream Central</title>
+  <link rel="stylesheet" type="text/css" href="css/header.css">
+  <link rel="stylesheet" type="text/css" href="css/home.css">
+  <link rel="stylesheet" type="text/css" href="css/footer.css">
+</head>
+
+<body>
+  <section class="main">
+    <header>
+      <a href="home.html" class="logo"><img src="images/f1car.png" id="logoimg">STREAM CENTRAL</a>
+      <div class="toggle"></div>
+      <ul class="navigation">
+        <li><a href="#" class="current">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="loginpage.html" class="login"><img src="images/usericon.png" alt="usericon">Login</a></li>
+        <li><a href="subscribe.html" class="sub">Subscribe</a></li>
+      </ul>
+      <!--- The script here creates the navigation for smaller screens--->
+      <script type="text/javascript">
+        var menutoggle = document.querySelector('.toggle'); // gets the div tag with class="toggle"
+        var navigation = document.querySelector('.navigation'); // gets the navigation bar
+        menutoggle.onclick = function(){
+          menutoggle.classList.toggle('active') // creates the class="active" when the button is clicked
+          navigation.classList.toggle('active') // creates the class="active" when the button is clicked
+        }
+      </script>
+      <!--- The script here creates the sticky effect--->
+      <script type="text/javascript">
+        window.addEventListener("scroll", function() {
+          var header = document.querySelector("header"); // the script here detects the scrolling effect and calls the function
+          header.classList.toggle("sticky", window.scrollY > 0); // in the function, we create a class="sticky" and make sures that nav bar with class="sticky" is always ontop with the use of window.scrollY > 0
+        })
+      </script>
+      <!--- The script here creates the sticky effect--->
+    </header>
+  <div class="vidbg">
+    <video muted autoplay loop>
+      <source class="vidbg" src="motorsport_montage.mp4" type="video/mp4">
+    </video>
+  </div>
+    <div class="content">
+      <div class="text">
+        <h1>ALL YOUR STREAMS<br><span>IN ONE PLACE</span></h1>
+        <hr width="70%">
+        <p>All your favourite motorsports live streaming television sites in one place</p>
+        <a href="subscribe.html" class="sub2">SUBSCRIBE NOW</a>
+      </div>
+      <div class="slider">
+        <div class="slides">
+          <img src="contentlogo/f1 logo.png" alt="">
+          <img src="contentlogo/f2 logo.png" alt="">
+          <img src="contentlogo/f3 logo.png" alt="">
+          <img src="contentlogo/formulae logo.png" alt="">
+          <img src="contentlogo/Moto GP logo.png" alt="">
+          <img src="contentlogo/indycarlogo.png" alt="">
+          <img src="contentlogo/Nascar logo.png" alt="">
+          <img src="contentlogo/w-series logo.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="button">
+      <ul class="socials1">
+        <li><a href="https://www.facebook.com/nanyangpoly/" target="_blank"><ion-icon name="logo-facebook" class="facebook"></ion-icon></a></li>
+        <li><a href="https://twitter.com/nyptweets" target="_blank"><ion-icon name="logo-twitter" class="twitter"></ion-icon></a></li>
+        <li><a href="https://www.instagram.com/nanyangpoly/?hl=en" target="_blank"><ion-icon name="logo-instagram" class="insta"></ion-icon></a></li>
+        <li><a href="https://www.youtube.com/channel/UCMP8RjXKT-onEF5Fgqt1cpw" target="_blank"><ion-icon name="logo-youtube" class="youtube"></ion-icon></a></li>
+      </ul>
+    </div>
+  </section>
+  <footer>
+    <div class="box">
+      <div class="section aboutus">
+        <h2>About Us</h2>
+        <p>We provide streaming services to the top motorsports channels at an affordable price. By subscribing to our services, you gain access to all the different channels, allowing you indulge in high quality streams across the popular motorsport channels.</p>
+        <ul class="socials2">
+          <li><a href="https://www.facebook.com/nanyangpoly/" target="_blank"><ion-icon name="logo-facebook" class="facebook"></ion-icon></a></li>
+          <li><a href="https://twitter.com/nyptweets" target="_blank"><ion-icon name="logo-twitter" class="twitter"></ion-icon></a></li>
+          <li><a href="https://www.instagram.com/nanyangpoly/?hl=en" target="_blank"><ion-icon name="logo-instagram" class="insta"></ion-icon></a></li>
+          <li><a href="https://www.youtube.com/channel/UCMP8RjXKT-onEF5Fgqt1cpw" target="_blank"><ion-icon name="logo-youtube" class="youtube"></ion-icon></a></li>
+        </ul>
+      </div>
+      <div class="section quicklinks">
+        <h2>Quick Links</h2>
+        <ul>
+          <li><a href="subscribe.html">Subscribe</a></li>
+          <li><a href="loginpage.html">Login</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+      </div>
+      <div class="section contact">
+        <h2>Contact Info</h2>
+        <ul class="info">
+          <li>
+            <span><ion-icon name="pin"></ion-icon></span>
+            <span>Nanyang Polytechnic<br> 180 Ang Mo Kio Avenue 8<br> Singapore 569830</span>
+          </li>
+          <li>
+            <span><ion-icon name="call"></ion-icon></span>
+            <p><a href="tel:64515115">+65 6451 5115</a></p>
+          </li>
+          <li>
+            <span><ion-icon name="mail"></ion-icon></span>
+            <p><a href="mailto:contactNYP@nyp.edu.sg">contactNYP@nyp.edu.sg</a></p>
+          </li>
+        </ul>
+      </div>
+      <div class="section map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3988.6632867796243!2d103.84716055085076!3d1.3786970618599221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2ssg!4v1658928778155!5m2!1sen!2ssg" width="450" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </footer>
+  <div class="copyright">
+    <p>Copyright &copy; 2022 Stream Central. All Rights Reserved.</p>
+  </div>
+  <!--- This script here helps import images from ionicons --->
+  <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

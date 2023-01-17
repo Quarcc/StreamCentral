@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="images/f1.png">
+  <title>Stream Central</title>
+  <link rel="stylesheet" type="text/css" href="css/header.css">
+  <link rel="stylesheet" type="text/css" href="css/login.css">
+  <link rel="stylesheet" type="text/css" href="css/footer.css">
+</head>
+
+<body>
+  <section class="main">
+    <header>
+      <a href="home.html" class="logo"><img src="images/f1car.png" id="logoimg">STREAM CENTRAL</a>
+      <div class="toggle"></div>
+      <ul class="navigation">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="#" class="login" id="logcurrent"><img src="images/usericon.png" alt="usericon">Login</a></li>
+        <li><a href="subscribe.html" class="sub">Subscribe</a></li>
+      </ul>
+      <!--- The script here creates the navigation for smaller screens--->
+      <script type="text/javascript">
+        var menutoggle = document.querySelector('.toggle');
+        var navigation = document.querySelector('.navigation');
+        menutoggle.onclick = function(){
+          menutoggle.classList.toggle('active')
+          navigation.classList.toggle('active')
+        }
+      </script>
+      <!--- The script here creates the sticky effect--->
+      <script type="text/javascript">
+        window.addEventListener("scroll", function() {
+          var header = document.querySelector("header");
+          header.classList.toggle("sticky", window.scrollY > 0);
+        })
+      </script>
+      <!--- The script here creates the sticky effect--->
+    </header>
+  </section>
+  <section class="loginmain">
+    <img src="images/background_image.jpg" alt="" class="loginbackgroundimage">
+    <section class="loginpagepart">
+      <div class="loginform">
+        <div class="logincredential ">
+          <h1>User Login</h1>
+          <form class="login_form" name="form" method="post">
+            <div class="font">Username</div>
+            <input type="text" autocomplete="off" name="user" id="username" value="" placeholder="Username"><br>
+            <div id="requiredfield1">This is a required field!</div>
+            <div class="font font2">Password</div>
+            <input type="password" autocomplete="off" name="pass" id="password" value="" placeholder="Password" required><br>
+            <div id="requiredfield2">This is a required field!</div>
+            <div id="loginerror">Username or Password entered is invalid!<br></div>
+            <div class="forgotpass"><a href="support.html">Forgot Password?</a></div>
+            <button type="button" onclick="validate(this.form)" id="btn">Login</button>
+            <div class="subnow">Not a member yet? <a href="register.html">Subscribe now!</a></div>
+          </form>
+        </div>
+        <video muted autoplay loop>
+          <source src="motorsport_montage.mp4" type="video/mp4">
+        </video>
+      </div>
+    </section>
+    <!--- Validation for the login credentials since there isnt a server available to me--->
+    <script type="text/javascript">
+      var username = document.forms['form']['user']; // This obtains the form box, so i can design the box later on
+      var password = document.forms['form']['pass']; // This obtains the form box, so i can design the box later on
+      var required1 = document.getElementById('requiredfield1'); // collect error message that was hidden previously
+      var required2 = document.getElementById('requiredfield2'); // collect error message that was hidden previously
+      var loginerror = document.getElementById('loginerror'); // collect error message that was hidden previously
+      var input1 = document.getElementById('username');
+      var input2 = document.getElementById('password');
+
+      input1.addEventListener("keypress", function(event) {
+        if (event.key === "Enter") {
+          document.getElementById("btn").click();
+        }
+      });
+
+      input2.addEventListener("keypress", function(event) {
+        if (event.key === "Enter") {
+          document.getElementById("btn").click();
+        }
+      });
+
+      function validate(form) {
+        if (form.user.value == 'NYP220692B' && form.pass.value == '220692B') {
+          window.open("loggedhome.html", "_self");
+        }
+        if (form.user.value != 'NYP220692B') {
+          username.style.border = "1px solid red";
+          password.style.border = "1px solid red";
+          loginerror.style.display = "block";
+        }
+        if (form.pass.value != '220692B') {
+          username.style.border = "1px solid red";
+          password.style.border = "1px solid red";
+          loginerror.style.display = "block";
+        }
+        if (form.user.value != 'NYP220692B' && form.pass.value != '220692B' && form.user.value != '' && form.pass.value != '') {
+          username.style.border = "1px solid red";
+          password.style.border = "1px solid red";
+          loginerror.style.display = "block";
+        }
+        if (form.user.value == '') {
+          required1.style.display = "block";
+        }
+        if (form.user.value != '') {
+          required1.style.display = "none";
+        }
+        if (form.user.value == '' && form.pass.value != '') {
+          required1.style.display = "block";
+          loginerror.style.display = "none";
+        }
+        if (form.pass.value == '') {
+          required2.style.display = "block";
+        }
+        if (form.pass.value != '') {
+          required2.style.display = "none";
+        }
+        if (form.user.value != '' && form.pass.value == ''){
+          required1.style.display = "none";
+          required2.style.display = "block";
+          loginerror.style.display = "none";
+        }
+        if (form.user.value == '' && form.pass.value == '') {
+          required1.style.display = "block";
+          required2.style.display = "block";
+          loginerror.style.display = "none";
+        }
+      }
+    </script>
+  </section>
+  <footer>
+    <div class="box">
+      <div class="section aboutus">
+        <h2>About Us</h2>
+        <p>We provide streaming services to the top motorsports channels at an affordable price. By subscribing to our services, you gain access to all the different channels, allowing you indulge in high quality streams across the popular motorsport
+          channels.</p>
+        <ul class="socials2">
+          <li><a href="#">
+              <ion-icon name="logo-facebook" class="facebook"></ion-icon>
+            </a></li>
+          <li><a href="#">
+              <ion-icon name="logo-twitter" class="twitter"></ion-icon>
+            </a></li>
+          <li><a href="#">
+              <ion-icon name="logo-instagram" class="insta"></ion-icon>
+            </a></li>
+          <li><a href="#">
+              <ion-icon name="logo-youtube" class="youtube"></ion-icon>
+            </a></li>
+        </ul>
+      </div>
+      <div class="section quicklinks">
+        <h2>Quick Links</h2>
+        <ul>
+          <li><a href="subscribe.html">Subscribe</a></li>
+          <li><a href="loginpage.html">Login</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+      </div>
+      <div class="section contact">
+        <h2>Contact Info</h2>
+        <ul class="info">
+          <li>
+            <span>
+              <ion-icon name="pin"></ion-icon>
+            </span>
+            <span>Nanyang Polytechnic<br> 180 Ang Mo Kio Avenue 8<br> Singapore 569830</span>
+          </li>
+          <li>
+            <span>
+              <ion-icon name="call"></ion-icon>
+            </span>
+            <p><a href="tel:64515115">+65 6451 5115</a></p>
+          </li>
+          <li>
+            <span>
+              <ion-icon name="mail"></ion-icon>
+            </span>
+            <p><a href="mailto:contactNYP@nyp.edu.sg">contactNYP@nyp.edu.sg</a></p>
+          </li>
+        </ul>
+      </div>
+      <div class="section map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3988.6632867796243!2d103.84716055085076!3d1.3786970618599221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2ssg!4v1658928778155!5m2!1sen!2ssg" width="450" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </footer>
+  <div class="copyright">
+    <p>Copyright &copy; 2022 Stream Central. All Rights Reserved.</p>
+  </div>
+  <!--- This script here helps import images from ionicons --->
+  <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+
+
+</body>
+
+</html>

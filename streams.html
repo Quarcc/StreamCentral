@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="images/f1.png">
+  <title>Stream Central</title>
+  <link rel="stylesheet" type="text/css" href="css/header.css">
+  <link rel="stylesheet" type="text/css" href="css/streams.css">
+  <link rel="stylesheet" type="text/css" href="css/footer.css">
+</head>
+
+<body>
+  <section class="main">
+    <header>
+      <a href="loggedhome.html" class="logo"><img src="images/f1car.png" id="logoimg">STREAM CENTRAL</a>
+      <div class="toggle"></div>
+      <ul class="navigation">
+        <li><a href="loggedhome.html">Home</a></li>
+        <li><a href="#" class="current">Streams</a></li>
+        <li><a href="loggedsupport.html">Support</a></li>
+        <li><a href="home.html" class="logout"><img src="images/logout.png" class="logouticon" alt="">Logout</a></li>
+      </ul>
+      <!--- The script here creates the navigation for smaller screens--->
+      <script type="text/javascript">
+        var menutoggle = document.querySelector('.toggle');
+        var navigation = document.querySelector('.navigation');
+        menutoggle.onclick = function() {
+          menutoggle.classList.toggle('active')
+          navigation.classList.toggle('active')
+        }
+      </script>
+      <!--- The script here creates the sticky effect--->
+      <script type="text/javascript">
+        window.addEventListener("scroll", function() {
+          var header = document.querySelector("header");
+          header.classList.toggle("sticky", window.scrollY > 0);
+        })
+      </script>
+      <!--- The script here creates the sticky effect--->
+    </header>
+  </section>
+  <div class="intro">
+    <h1>WELCOME TO THE STREAMS SECTION!</h1>
+    <h2>Click on any of the images to direct to their streams</h2>
+  </div>
+  <div class="imageadjust">
+    <div class="images">
+      <a href="#formula1"><img src="contentlogo/f1 logo.png" alt=""></a>
+      <a href="#formula2"><img src="contentlogo/f2 logo.png" alt=""></a>
+      <a href="#formula3"><img src="contentlogo/f3 logo.png" alt=""></a>
+      <a href="#formulae"><img src="contentlogo/formulae logo.png" alt=""></a>
+      <a href="#motogp"><img src="contentlogo/Moto GP logo.png" alt=""></a>
+      <a href="#indy"><img src="contentlogo/indycarlogo.png" alt=""></a>
+      <a href="#nascar"><img src="contentlogo/Nascar logo.png" alt=""></a>
+      <a href="#wseries"><img src="contentlogo/w-series logo.png" alt=""></a>
+    </div>
+  </div>
+  <hr style="height: 10px; background: white; margin-top: 30px;">
+  <div id="formula1" class="stream">
+    <div class="headerstream">
+      <h1>FORMULA 1</h1>
+    </div>
+    <iframe width="1000" height="600" src="https://www.youtube.com/embed/XU0BzjnPHlQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+    <p>For legal purposes, actual streams are not embedded here</p>
+    <hr style="height: 10px; background: white; margin-top: 30px;">
+  </div>
+  <div id="formula2" class="stream">
+    <div class="headerstream">
+      <h1>FORMULA 2</h1>
+    </div>
+    <iframe width="1000" height="600" src="https://www.youtube.com/embed/cAiZihptf1c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+    <p>For legal purposes, actual streams are not embedded here</p>
+    <hr style="height: 10px; background: white; margin-top: 30px;">
+  </div>
+  <div id="formula3" class="stream">
+    <div class="headerstream">
+      <h1>FORMULA 3</h1>
+    </div>
+    <iframe width="1000" height="600" src="https://www.youtube.com/embed/oESFRZ5zuN0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+    <p>For legal purposes, actual streams are not embedded here</p>
+    <hr style="height: 10px; background: white; margin-top: 30px;">
+  </div>
+  <div id="formulae" class="stream">
+    <div class="headerstream">
+      <h1>FORMULA E</h1>
+    </div>
+    <iframe width="1000" height="600" src="https://www.youtube.com/embed/QK8_63_hlhY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+    <p>For legal purposes, actual streams are not embedded here</p>
+    <hr style="height: 10px; background: white; margin-top: 30px;">
+  </div>
+  <div id="motogp" class="stream">
+    <div class="headerstream">
+      <h1>MOTO GP</h1>
+    </div>
+    <iframe width="1000" height="600" src="https://www.youtube.com/embed/6bvIDebG-pI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+    <p>For legal purposes, actual streams are not embedded here</p>
+    <hr style="height: 10px; background: white; margin-top: 30px;">
+  </div>
+  <div id="indy" class="stream">
+    <div class="headerstream">
+      <h1>INDYCAR</h1>
+    </div>
+    <iframe width="1000" height="600" src="https://www.youtube.com/embed/vGstEl4LzUw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+    <p>For legal purposes, actual streams are not embedded here</p>
+    <hr style="height: 10px; background: white; margin-top: 30px;">
+  </div>
+  <div id="nascar" class="stream">
+    <div class="headerstream">
+      <h1>NASCAR</h1>
+    </div>
+    <iframe width="1000" height="600" src="https://www.youtube.com/embed/2vw_DnYT28g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+    <p>For legal purposes, actual streams are not embedded here</p>
+    <hr style="height: 10px; background: white; margin-top: 30px;">
+  </div>
+  <div id="wseries" class="stream">
+    <div class="headerstream">
+      <h1>W-SERIES</h1>
+    </div>
+    <iframe width="1000" height="600" src="https://www.youtube.com/embed/rrkNlwQ541U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+    <p>For legal purposes, actual streams are not embedded here</p>
+    <hr style="height: 10px; background: white; margin-top: 30px;">
+  </div>
+  <footer>
+    <div class="box">
+      <div class="section aboutus">
+        <h2>About Us</h2>
+        <p>We provide streaming services to the top motorsports channels at an affordable price. By subscribing to our services, you gain access to all the different channels, allowing you indulge in high quality streams across the popular motorsport
+          channels.</p>
+        <ul class="socials2">
+          <li><a href="https://www.facebook.com/nanyangpoly/" target="_blank">
+              <ion-icon name="logo-facebook" class="facebook"></ion-icon>
+            </a></li>
+          <li><a href="https://twitter.com/nyptweets" target="_blank">
+              <ion-icon name="logo-twitter" class="twitter"></ion-icon>
+            </a></li>
+          <li><a href="https://www.instagram.com/nanyangpoly/?hl=en" target="_blank">
+              <ion-icon name="logo-instagram" class="insta"></ion-icon>
+            </a></li>
+          <li><a href="https://www.youtube.com/channel/UCMP8RjXKT-onEF5Fgqt1cpw" target="_blank">
+              <ion-icon name="logo-youtube" class="youtube"></ion-icon>
+            </a></li>
+        </ul>
+      </div>
+      <div class="section quicklinks">
+        <h2>Quick Links</h2>
+        <ul>
+          <li><a href="home.html">Logout</a></li>
+          <li><a href="streams.html">Streams</a></li>
+          <li><a href="loggedhome.html">Home</a></li>
+          <li><a href="loggedsupport.html">Support</a></li>
+        </ul>
+      </div>
+      <div class="section contact">
+        <h2>Contact Info</h2>
+        <ul class="info">
+          <li>
+            <span>
+              <ion-icon name="pin"></ion-icon>
+            </span>
+            <span>Nanyang Polytechnic<br> 180 Ang Mo Kio Avenue 8<br> Singapore 569830</span>
+          </li>
+          <li>
+            <span>
+              <ion-icon name="call"></ion-icon>
+            </span>
+            <p><a href="tel:64515115">+65 6451 5115</a></p>
+          </li>
+          <li>
+            <span>
+              <ion-icon name="mail"></ion-icon>
+            </span>
+            <p><a href="mailto:contactNYP@nyp.edu.sg">contactNYP@nyp.edu.sg</a></p>
+          </li>
+        </ul>
+      </div>
+      <div class="section map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3988.6632867796243!2d103.84716055085076!3d1.3786970618599221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2ssg!4v1658928778155!5m2!1sen!2ssg" width="450" height="300"
+          style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </footer>
+  <div class="copyright">
+    <p>Copyright &copy; 2022 Stream Central. All Rights Reserved.</p>
+  </div>
+  <!--- This script here helps import images from ionicons --->
+  <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

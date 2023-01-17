@@ -1,0 +1,169 @@
+footer{
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 50px 100px;
+  background: #111;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+footer .box{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+footer .box .section{
+  margin-right: 30px;
+}
+
+footer .box .section.aboutus{
+  width: 25%;
+}
+
+footer .box h2{
+  position: relative;
+  color: white;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+footer .box h2:before{
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: purple;
+}
+
+footer p{
+  color: #999;
+}
+
+.socials2{
+  margin-top: 20px;
+  display: flex;
+}
+
+.socials2 li{
+  list-style: none;
+}
+
+.socials2 li a{
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  text-decoration: none;
+  border-radius: 4px;
+  color: white;
+}
+
+.socials2 li a:hover{
+  background: white;
+  font-size: 30px;
+}
+
+.socials2 li a .facebook:hover{
+  color: #4267B2;
+}
+
+.socials2 li a .twitter:hover{
+  color: #1DA1F2
+}
+
+.socials2 li a .insta:hover{
+  color: #bc2a8d
+}
+
+.socials2 li a .youtube:hover{
+  color: #FF0000;
+}
+
+.quicklinks{
+  position: relative;
+  width: 15%;
+}
+
+.quicklinks ul li{
+  list-style: none;
+}
+
+.quicklinks ul li a{
+  color: #999;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: inline-block;
+  transition: 0.5s
+}
+
+.quicklinks ul li a:hover{
+  color: white;
+  transform: translateX(10px);
+}
+
+.contact{
+  width: calc(25% - 60px);
+  margin-right: 0 !important;
+}
+
+.contact .info{
+  position: relative;
+}
+
+.contact .info li{
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.contact .info li span:nth-child(1){
+  color: white;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.contact .info li span{
+  color: #999;
+}
+
+.contact .info li a{
+  color: #999;
+  text-decoration: none;
+}
+
+.contact .info li a:hover{
+  color: white;
+}
+
+.copyright{
+  width: 100%;
+  background: #181818;
+  padding: 8px 100px;
+  text-align: center;
+  color: #999;
+}
+
+@media (max-width: 991px){
+  footer{
+    padding: 40px;
+  }
+  footer .box{
+    flex-direction: column;
+  }
+  footer .box .section{
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+  footer .box .section.aboutus{
+    width: 100%;
+  }
+}

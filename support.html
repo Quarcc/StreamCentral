@@ -1,0 +1,232 @@
+  <!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="images/f1.png">
+  <title>Stream Central</title>
+  <link rel="stylesheet" type="text/css" href="css/header.css">
+  <link rel="stylesheet" type="text/css" href="css/support.css">
+  <link rel="stylesheet" type="text/css" href="css/footer.css">
+</head>
+
+<body>
+  <section class="main">
+    <header>
+      <a href="home.html" class="logo"><img src="images/f1car.png" id="logoimg">STREAM CENTRAL</a>
+      <div class="toggle"></div>
+      <ul class="navigation">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="#" class="current">Support</a></li>
+        <li><a href="loginpage.html" class="login"><img src="images/usericon.png" alt="usericon">Login</a></li>
+        <li><a href="subscribe.html" class="sub">Subscribe</a></li>
+      </ul>
+      <!--- The script here creates the navigation for smaller screens--->
+      <script type="text/javascript">
+        var menutoggle = document.querySelector('.toggle');
+        var navigation = document.querySelector('.navigation');
+        menutoggle.onclick = function(){
+          menutoggle.classList.toggle('active')
+          navigation.classList.toggle('active')
+        }
+      </script>
+      <!--- The script here creates the sticky effect--->
+      <script type="text/javascript">
+        window.addEventListener("scroll", function() {
+          var header = document.querySelector("header");
+          header.classList.toggle("sticky", window.scrollY > 0);
+        })
+      </script>
+      <!--- The script here creates the sticky effect--->
+    </header>
+    <img class="top_image" src="images/abouttop_image.png" alt="">
+  </section>
+  <div class="supportheader">
+    <h1>SUPPORT</h1>
+  </div>
+  <div id="supportadjust">
+    <div class="supportformtemplate">
+      <div class="supportform">
+        <h1>SUPPORT APPLICATION</h1>
+        <form class="support_form" action="" method="post">
+          <div class="label">First Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Last Name:</div>
+          <input type="text" placeholder="First Name" autocomplete="off" id="firstname" name="fname" value="" style="max-width:250px"><input type="text" placeholder="Last Name" autocomplete="off" id="lastname" name="lname" value="" style="max-width:250px; margin-left:25px;">
+          <div id="blankfield1" style="float:left">This is a required field!</div><div id="blankfield2" style="float:right">This is a required field!</div>
+          <div class="label">Email Address:</div>
+          <input type="text" autocomplete="off" id="email" name="email" value="" placeholder="user@email.com">
+          <div id="validmail">Invalid Email! Please enter a valid Email</div>
+          <div class="label">Topic Title:</div>
+          <input type="text" autocomplete="off" id="title" name="issue" value="">
+          <div id="blankfield4">This is a required field!</div>
+          <div class="label">Description of Topic:</div>
+          <textarea name="description" autocomplete="off" id="descript" maxlength="1000" rows="10" cols="80"></textarea><br>
+          <div id="blankfield5">This is a required field!</div>
+          <button type="button" onclick="validateempty(this.form)">SUBMIT</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    var blank1 = document.getElementById("blankfield1");
+    var blank2 = document.getElementById("blankfield2");
+    var blank4 = document.getElementById("blankfield4");
+    var blank5 = document.getElementById("blankfield5");
+    var email = document.getElementById("validmail")
+    var validmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+
+    function validateempty(form){
+      if (form.fname.value == ''){
+        blank1.style.display = "block"
+      }
+      if (form.lname.value == ''){
+        blank2.style.display = "block"
+      }
+      if (form.email.value == ''){
+        email.style.display = "block"
+      }
+      if (!form.email.value.match(validmail)){
+        email.style.display = "block"
+      }
+      if (form.issue.value == ''){
+        blank4.style.display = "block"
+      }
+      if (form.description.value == ''){
+        blank5.style.display = "block"
+      }
+      if (form.fname.value != ''){
+        blank1.style.display = "none"
+      }
+      if (form.lname.value != ''){
+        blank2.style.display = "none"
+      }
+      if (form.email.value.match(validmail)){
+        email.style.display = "none"
+      }
+      if (form.issue.value != ''){
+        blank4.style.display = "none"
+      }
+      if (form.description.value != ''){
+        blank5.style.display = "none"
+      }
+      if (form.fname.value != '' && form.lname.value != '' && form.email.value.match(validmail) && form.issue.value != '' && form.description.value != ''){
+        show()
+      }
+    }
+  </script>
+  <div id="responseadjust">
+    <div class="responsebackground">
+      <div class="repsponsecontent">
+        <h1>Dear Mr/Mrs <span id="flname"></span></h1>
+        <p>Thank you for reaching out to us!<br><Br>We have taken note of your issue(s) on Topic:<br><b><span id=topicissue><span></b></p><br>
+        <p>Do allow us at least <b>1 Working Day</b> to respond to your issue. We will try our best to provide you the best solutions for your stated issue.</p><br>
+        <p>Please check your Email:<br><b><span id="responseemail"><span></b><br></p>
+        <p>For any reply to your solutions the following day</p><br>
+        <p class="lastline">In the event when there hasn't been a reply after <b>3 Working Days</b>, you may call us at <b>+65 6451 5115</b> during our <b>Hotline Operating Hours</b> or you may choose to walk-in at our Front Desk during our <b>Office Operating Hours</b></p>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    function show(){
+      document.getElementById('supportadjust').style.display = "none"
+      document.getElementById('responseadjust').style.display = "block"
+      var firstname = document.getElementById("firstname").value;
+      var lastname = document.getElementById("lastname").value;
+      var flname = firstname + lastname
+      var headnode = document.getElementById("flname");
+      headnode.innerHTML = firstname + ' ' + lastname;
+      var topic = document.getElementById("title").value;
+      var topicnode = document.getElementById("topicissue");
+      topicnode.innerText = '"' + topic + '"';
+      var email = document.getElementById("email").value;
+      var emailnode = document.getElementById("responseemail");
+      emailnode.innerHTML = '"'+ email +'"';
+    }
+  </script>
+  <!-- <div class="tableadjust">
+    <div class="supportheader">
+      <h2>OPERATING HOURS: </h2>
+    </div>
+    <table class="OH" border="1">
+      <thead>
+        <th>Days</th>
+        <th>Monday</th>
+        <th>Tuesday</th>
+        <th>Wednesday</th>
+        <th>Thursday</th>
+        <th>Friday</th>
+        <th>Saturday</th>
+        <th>Sunday</th>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Office Operating Hours (GMT +8)</td>
+        <td colspan="5" rowspan="2" class="hours" data-label="Monday-Friday"> 8:00AM - 6:00PM</td>
+        <td rowspan="2" class="hours" data-label="Saturday"> 8:00AM - 3:00PM</td>
+        <td class="hours" data-label="Sunday"> CLOSED </td>
+      </tr>
+      <tr>
+        <td>Hotline Operating Hours (GMT +8)</td>
+        <td class="hours" data-label="Sunday"> UNAVAILABLE </td>
+      </tr>
+      <tr>
+        <td>Support Operating Hours (GMT +8)</td>
+        <td colspan="5" class="hours" data-label="Monday-Friday"> 8:00AM - 10:00PM</td>
+        <td colspan="2" class="hours" data-label="Saturday-Sunday"> 8:00AM - 6:00PM</td>
+      </tr>
+    </tbody>
+    </table> -->
+  </div>
+  <footer>
+    <div class="box">
+      <div class="section aboutus">
+        <h2>About Us</h2>
+        <p>We provide streaming services to the top motorsports channels at an affordable price. By subscribing to our services, you gain access to all the different channels, allowing you indulge in high quality streams across the popular motorsport channels.</p>
+        <ul class="socials2">
+          <li><a href="https://www.facebook.com/nanyangpoly/" target="_blank"><ion-icon name="logo-facebook" class="facebook"></ion-icon></a></li>
+          <li><a href="https://twitter.com/nyptweets" target="_blank"><ion-icon name="logo-twitter" class="twitter"></ion-icon></a></li>
+          <li><a href="https://www.instagram.com/nanyangpoly/?hl=en" target="_blank"><ion-icon name="logo-instagram" class="insta"></ion-icon></a></li>
+          <li><a href="https://www.youtube.com/channel/UCMP8RjXKT-onEF5Fgqt1cpw" target="_blank"><ion-icon name="logo-youtube" class="youtube"></ion-icon></a></li>
+        </ul>
+      </div>
+      <div class="section quicklinks">
+        <h2>Quick Links</h2>
+        <ul>
+          <li><a href="subscribe.html">Subscribe</a></li>
+          <li><a href="loginpage.html">Login</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+      </div>
+      <div class="section contact">
+        <h2>Contact Info</h2>
+        <ul class="info">
+          <li>
+            <span><ion-icon name="pin"></ion-icon></span>
+            <span>Nanyang Polytechnic<br> 180 Ang Mo Kio Avenue 8<br> Singapore 569830</span>
+          </li>
+          <li>
+            <span><ion-icon name="call"></ion-icon></span>
+            <p><a href="tel:64515115">+65 6451 5115</a></p>
+          </li>
+          <li>
+            <span><ion-icon name="mail"></ion-icon></span>
+            <p><a href="mailto:contactNYP@nyp.edu.sg">contactNYP@nyp.edu.sg</a></p>
+          </li>
+        </ul>
+      </div>
+      <div class="section map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3988.6632867796243!2d103.84716055085076!3d1.3786970618599221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2ssg!4v1658928778155!5m2!1sen!2ssg" width="450" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </footer>
+  <div class="copyright">
+    <p>Copyright &copy; 2022 Stream Central. All Rights Reserved.</p>
+  </div>
+  <!--- This script here helps import images from ionicons --->
+  <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>

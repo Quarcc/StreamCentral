@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="images/f1.png">
+  <title>Stream Central</title>
+  <link rel="stylesheet" type="text/css" href="css/header.css">
+  <link rel="stylesheet" type="text/css" href="css/loggedhome.css">
+  <link rel="stylesheet" type="text/css" href="css/footer.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <section class="main">
+    <header>
+      <a href="loggedhome.html" class="logo"><img src="images/f1car.png" id="logoimg">STREAM CENTRAL</a>
+      <div class="toggle"></div>
+      <ul class="navigation">
+        <li><a href="#" class="current">Home</a></li>
+        <li><a href="streams.html">Streams</a></li>
+        <li><a href="loggedsupport.html">Support</a></li>
+        <li><a href="home.html" class="logout"><img src="images/logout.png" class="logouticon" alt="">Logout</a></li>
+      </ul>
+      <!--- The script here creates the navigation for smaller screens--->
+      <script type="text/javascript">
+        var menutoggle = document.querySelector('.toggle');
+        var navigation = document.querySelector('.navigation');
+        menutoggle.onclick = function() {
+          menutoggle.classList.toggle('active')
+          navigation.classList.toggle('active')
+        }
+      </script>
+      <!--- The script here creates the sticky effect--->
+      <script type="text/javascript">
+        window.addEventListener("scroll", function() {
+          var header = document.querySelector("header");
+          header.classList.toggle("sticky", window.scrollY > 0);
+        })
+      </script>
+      <!--- The script here creates the sticky effect--->
+    </header>
+    <img src="images/loginhome.png" class="backgroundimageheader" alt="">
+  </section>
+  <div class="adjustcountdown">
+    <h1>Singapore Grand Prix</h1>
+    <div class="countdown">
+      <div class="timer">
+        <h2 id="days"></h2>
+        <small>Days</small>
+      </div>
+      <div class="timer">
+        <h2 id="hours"></h2>
+        <small>Hours</small>
+      </div>
+      <div class="timer">
+        <h2 id="min"></h2>
+        <small>Minutes</small>
+      </div>
+      <div class="timer">
+        <h2 id="sec"></h2>
+        <small>Seconds</small>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    var days = document.getElementById("days");
+    var hours = document.getElementById("hours");
+    var mins = document.getElementById("min");
+    var secs = document.getElementById("sec");
+
+    var date = new Date('October 2 2022 20:00:00');
+
+    function updatecountdown() {
+      var currenttime = new Date();
+      var diff = date - currenttime;
+
+      var d = Math.floor(diff / 1000 / 60 / 60 / 24);
+      var h = Math.floor(diff / 1000 / 60 / 60) % 24;
+      var m = Math.floor(diff / 1000 / 60) % 60;
+      var s = Math.floor(diff / 1000) % 60;
+
+      days.innerHTML = d;
+      hours.innerHTML = h < 10 ? '0' + h : h; /* if hours is less than 10, we will add 0 to the front of the number, eg. 09, else just keep it as itself*/
+      mins.innerHTML = m < 10 ? '0' + m : m;
+      secs.innerHTML = s < 10 ? '0' + s : s;
+    }
+
+    setInterval(updatecountdown, 1000);
+  </script>
+  <div class="welcome">
+    <h1>Welcome back!</h1>
+    <h2>Catch up with the latest news below!</h2>
+  </div>
+  <table>
+    <tr>
+      <td>
+        <a href="https://www.astonmartinf1.com/en-GB/news/announcement/fernando-alonso-to-join-aston-martin-f1-in-2023" target="_blank">
+          <div class="news1">
+            <img src="contentlogo/FAjoinsamr.png" alt="">
+            <p><b>Fernando Alonso, Alpine Formula 1 Team driver joins Aston Martin on a multi-year contract</b></p>
+          </div>
+        </a>
+      </td>
+      <td>
+        <a href="https://www.formula1.com/en/latest/article.breaking-four-time-champion-sebastian-vettel-to-retire-from-formula-1-at-the.65j625XK4FPq6qf2Qn5gb5.html" target="_blank">
+          <div class="news1"><img src="contentlogo/Sebretires.jpg" alt="">
+            <p><b>Sebestian Vettel announces his retirement from Formula 1 ahead of the Hungarian Grand Prix</b></p>
+          </div>
+        </a>
+      </td>
+      <td>
+        <a href="https://www.fiaformula2.com/Latest/75ZM83vsrjaABGye5fHuPk/lawson-disappointed-to-miss-out-on-more-points-but-says-carlin-speed-is" target="_blank">
+          <div class="news1">
+            <img src="contentlogo/lawsonf2.png" alt="">
+            <p><b>Liam Lawson misses out scoing points in F2 Feature Race but stated that Carlin speed was there</b></p>
+          </div>
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://www.fiaformula2.com/Latest/7c9f3ePtK9Od2KqxDcw0So/feature-race-pourchaire-checkmates-rivals-to-reignite-championship-fight" target="_blank">
+          <div class="news2">
+            <img src="contentlogo/Puchairef2.png" alt="">
+            <p><b>Feature Race: Pourchaire scored points, reginiting his Championship fight at the front amongst his rivals</b></p>
+          </div>
+        </a>
+      </td>
+      <td>
+        <a href="https://www.fiaformula3.com/Latest/6wHBGH35SZI6Ka1dDHvjFi/highlights-collet-claims-maiden-f3-win-in-the-rain" target="_blank">
+          <div class="news2">
+            <img src="contentlogo/Colletf3.png" alt="">
+            <p><b>Caio Collet claims maiden F3 race in Budapest sprint race in wet conditions</b></p>
+          </div>
+        </a>
+      </td>
+      <td>
+        <a href="https://www.fiaformula3.com/Latest/TBX7tKai0KQ0QZ0El0SGX/ushijima-channelling-qualifying-anger-in-push-to-redeem-himself" target="_blank">
+          <div class="news2">
+            <img src="contentlogo/Ushijimaf3.png" alt="">
+            <p><b>Ushijima channels his Qualifying Anger in order to push to redeem himself</b></p>
+          </div>
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://www.fiaformulae.com/en/news/2022/july/de-vries-penalty-london-e-prix-round-13" target="_blank">
+          <div class="news3">
+            <img src="contentlogo/formulaedevries.PNG" alt="">
+            <p><b>Nyck De Vries loses his podium in last week's race after receiving a time penalty</b></p>
+          </div>
+        </a>
+      </td>
+      <td>
+        <a href="https://www.indycar.com/news/2022/08/08-01-lundgaard" target="_blank">
+          <div class="news3">
+            <img src="contentlogo/lundgaardpodiumindycar.jpg" alt="">
+            <p><b>Christian Lundgaard claims his first podium, continues RLL's Drive Forward</b></p>
+          </div>
+        </a>
+      </td>
+      <td>
+        <a href="https://www.motogp.com/en/news/2022/08/01/act-two-begins-silverstone-kicks-the-season-back-into-gear/428727" target="_blank">
+          <div class="news3">
+            <img src="contentlogo/motogpsilverstone.jpg" alt="">
+            <p><b>Act Two for the MotoGP begins with Silverstone kicking it back into action</b></p>
+          </div>
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <a href="https://www.nascar.com/news-media/2022/07/31/astute-pit-road-gamble-ends-in-heartbreak-for-ryan-blaney-at-indianapolis-road-course/" target="_blank"><div class="news4">
+            <img src="contentlogo/ryanblaneynascar.jpg" alt="">
+            <p><b>Astute pit-road gamble end in heartbreak for Ryan Blaney at indianapolis road course</b></p>
+        </div>
+      </a>
+      </td>
+      <td>
+        <a href="https://wseries.com/w-hub/alice-powell-back-on-top-in-budapest/" target="_blank"><div class="news4">
+            <img src="contentlogo/alicepowellp1.jpg" alt="">
+            <p><b>Alice Powell powers back to the top step of the podium, after her pole position at Budapest</b></p>
+        </div>
+      </a>
+      </td>
+      <td>
+        <a href="https://wseries.com/w-hub/w-series-to-race-in-singapore-as-2022-calendar-changes/" target="_blank"><div class="news4">
+            <img src="contentlogo/w-seriessg.jpg" alt="">
+            <p><b>BREAKING: W-Series to race in Singapore in the 2022 season this October</b></p>
+        </div>
+      </a>
+      </td>
+    </tr>
+  </table>
+  <footer>
+    <div class="box">
+      <div class="section aboutus">
+        <h2>About Us</h2>
+        <p>We provide streaming services to the top motorsports channels at an affordable price. By subscribing to our services, you gain access to all the different channels, allowing you indulge in high quality streams across the popular motorsport
+          channels.</p>
+        <ul class="socials2">
+          <li><a href="https://www.facebook.com/nanyangpoly/" target="_blank">
+              <ion-icon name="logo-facebook" class="facebook"></ion-icon>
+            </a></li>
+          <li><a href="https://twitter.com/nyptweets" target="_blank">
+              <ion-icon name="logo-twitter" class="twitter"></ion-icon>
+            </a></li>
+          <li><a href="https://www.instagram.com/nanyangpoly/?hl=en" target="_blank">
+              <ion-icon name="logo-instagram" class="insta"></ion-icon>
+            </a></li>
+          <li><a href="https://www.youtube.com/channel/UCMP8RjXKT-onEF5Fgqt1cpw" target="_blank">
+              <ion-icon name="logo-youtube" class="youtube"></ion-icon>
+            </a></li>
+        </ul>
+      </div>
+      <div class="section quicklinks">
+        <h2>Quick Links</h2>
+        <ul>
+          <li><a href="home.html">Logout</a></li>
+          <li><a href="streams.html">Streams</a></li>
+          <li><a href="loggedhome.html">Home</a></li>
+          <li><a href="loggedsupport.html">Support</a></li>
+        </ul>
+      </div>
+      <div class="section contact">
+        <h2>Contact Info</h2>
+        <ul class="info">
+          <li>
+            <span>
+              <ion-icon name="pin"></ion-icon>
+            </span>
+            <span>Nanyang Polytechnic<br> 180 Ang Mo Kio Avenue 8<br> Singapore 569830</span>
+          </li>
+          <li>
+            <span>
+              <ion-icon name="call"></ion-icon>
+            </span>
+            <p><a href="tel:64515115">+65 6451 5115</a></p>
+          </li>
+          <li>
+            <span>
+              <ion-icon name="mail"></ion-icon>
+            </span>
+            <p><a href="mailto:contactNYP@nyp.edu.sg">contactNYP@nyp.edu.sg</a></p>
+          </li>
+        </ul>
+      </div>
+      <div class="section map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3988.6632867796243!2d103.84716055085076!3d1.3786970618599221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2ssg!4v1658928778155!5m2!1sen!2ssg" width="450" height="300"
+          style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </footer>
+  <div class="copyright">
+    <p>Copyright &copy; 2022 Stream Central. All Rights Reserved.</p>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+  <!--- This script here helps import images from ionicons --->
+  <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
