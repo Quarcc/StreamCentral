@@ -89,20 +89,20 @@
       });
 
       function validate(form) {
-        if (form.user.value == 'NYP220692B' && form.pass.value == '220692B') {
+        if (form.user.value == 'Name' && form.pass.value == '123456') {
           window.open("loggedhome.html", "_self");
         }
-        if (form.user.value != 'NYP220692B') {
+        if (form.user.value != 'Name') {
           username.style.border = "1px solid red";
           password.style.border = "1px solid red";
           loginerror.style.display = "block";
         }
-        if (form.pass.value != '220692B') {
+        if (form.pass.value != '123456') {
           username.style.border = "1px solid red";
           password.style.border = "1px solid red";
           loginerror.style.display = "block";
         }
-        if (form.user.value != 'NYP220692B' && form.pass.value != '220692B' && form.user.value != '' && form.pass.value != '') {
+        if (form.user.value != 'Name' && form.pass.value != '123456' && form.user.value != '' && form.pass.value != '') {
           username.style.border = "1px solid red";
           password.style.border = "1px solid red";
           loginerror.style.display = "block";
